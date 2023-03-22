@@ -1,5 +1,4 @@
-// const apikey = 'c6e8fe36f1a55b02cc40decf9a231e52';//from edu.nbnull@gmail
-const apikey = 'cad7ec124945dcfff04e457e76760d90';//from https://dev.to/areeburrub/using-weather-api-with-javascript-3a04
+const apikey = 'cad7ec124945dcfff04e457e76760d90';
  
 window.addEventListener("load", () => {
     if(navigator.geolocation){
