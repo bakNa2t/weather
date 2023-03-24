@@ -15,6 +15,7 @@ body{
     font-family: 'Roboto', sans-serif;
     padding: 1rem 5rem;
     background: linear-gradient(rgba(0, 0, 179,0.2),rgba(117, 117, 163,0.15 ),rgba(0, 0, 204,0.5)),url(image/img-bg.jpeg);
+    background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

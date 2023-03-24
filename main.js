@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
             let lon = position.coords.longitude;
             let lat = position.coords.latitude;
 
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=kaliningrad&appid=${apikey}`;
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apikey}`;
 
             fetch(url).then(res => {
                 return res.json()
