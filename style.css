@@ -27,6 +27,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 50px;
 }
 
 .header h1{
@@ -43,6 +44,12 @@ body{
     border-radius: 15px;
     background: rgba(204, 255, 235,0.7);
 }
+
+::placeholder {
+    color: #9900cc;
+    font-size: 1rem;
+}
+
 
 #search{
     background: #79a6d2;
@@ -79,7 +86,7 @@ main{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    /* filter: grayscale(100%); */
+    filter: grayscale(60%);
     background-color: rgba(240,248,255,0.4);
 }
 
@@ -160,6 +167,7 @@ main{
     width: 60%;
     height: 5px;
     margin: 0 auto;
+    margin-bottom: 2%;
 }
 
 .forecastD{
@@ -174,9 +182,9 @@ main{
 
 @media (max-width: 413px) {
     html {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     body {
         padding: 1rem 1rem;
@@ -186,11 +194,12 @@ main{
         grid-template-columns: 1fr 3px 1fr;
         grid-column-gap: 15px;
         margin: 0 10px;
-        margin-top: 3em;
+        margin-top: 2rem;
     }
     .header{
         display: block;
         text-align: center;
+        margin: 0;
     }
     .header h1{
         font-size: 2.25em;
@@ -201,7 +210,6 @@ main{
         padding: 5px 10px;
         border-radius: 10px;
     }
-    
     #search{
         font-size: 1em;
         padding: 5px 10px; 
