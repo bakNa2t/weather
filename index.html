@@ -8,121 +8,124 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!------------------ Header ------------------>
-    <div class="header">
-        <h1>WEATHER WEBAPP</h1>
-        <div>
-            <input type="text" id="input" placeholder="Enter location">
-            <button id="search">Search</button>
+    <div class="container-wrap">
+<!--------Header-------->
+        <div class="header">
+            <h1>WEATHER WEBAPP</h1>
+            <div>
+                <input type="text" id="input" placeholder="Enter location">
+                <button id="search">Search</button>
+            </div>
         </div>
-    </div>
 
-    <main>
-<!----------------Weather city ---------------------------->
+        <main>
+<!--------Weather city-------->
 
-        <div class="weather">
-            <h2 id="city"></h2>
+            <div class="weather">
+                <h2 id="city"></h2>
+                
+                <div class="temp_box">
+                    <img src="image/weather_icon.png" id="img">
+                    <p id="temperature">5 °C</p>
+                </div>
+                <span id="clouds">Broken Clouds</span>
+            </div>
+
+            <div class="divider_ver"></div>
             
-            <div class="temp_box">
-                <img src="image/weather_icon.png" id="img">
-                <p id="temperature">5 °C</p>
+<!--------Forecast per Hours-------->
+
+            <div class="forecastH">
+                <p class="cast_header">Upcoming forecast</p>
+                <div class="templist">
+
+                    <div class="next">
+                        <div>
+                            <p class="time">8:30 PM</p>
+                            <p>5 °C / 8 °C</p>
+                        </div>
+                        <p class="desc">Light Rain</p>
+                    </div>
+
+                    <div class="next">
+                        <div>
+                            <p class="time">8:30 PM</p>
+                            <p>5 °C / 8 °C</p>
+                        </div>
+                        <p class="desc">Light Rain</p>
+                    </div>
+
+                    <div class="next">
+                        <div>
+                            <p class="time">8:30 PM</p>
+                            <p>5 °C / 8 °C</p>
+                        </div>
+                        <p class="desc">Light Rain</p>
+                    </div>
+
+                    <div class="next">
+                        <div>
+                            <p class="time">8:30 PM</p>
+                            <p>5 °C / 8 °C</p>
+                        </div>
+                        <p class="desc">Light Rain</p>
+                    </div>
+
+                    <div class="next">
+                        <div>
+                            <p class="time">8:30 PM</p>
+                            <p>5 °C / 8 °C</p>
+                        </div>
+                        <p class="desc">Light Rain</p>
+                    </div>
+
+                </div>
             </div>
-            <span id="clouds">Broken Clouds</span>
+
+        </main>
+
+<!--------Forecast per 5 days---------->
+
+        <div class="forecastD">
+
+            <div class="diliver_hor"></div>
+
+            <p class="cast_header">Next 5 Days Forecast</p>
+            <div class="weekF">
+
+                <div class="dayF">
+                    <p class="date">Sun Jul 03 2023</p>
+                    <p>5 °C / 8 °C</p>
+                    <p class="desc">Overcast Clouds</p>
+                </div>
+
+                <div class="dayF">
+                    <p class="date">Sun Jul 03 2023</p>
+                    <p>5 °C / 8 °C</p>
+                    <p class="desc">Overcast Clouds</p>
+                </div>
+
+                <div class="dayF">
+                    <p class="date">Sun Jul 03 2023</p>
+                    <p>5 °C / 8 °C</p>
+                    <p class="desc">Overcast Clouds</p>
+                </div>
+
+                <div class="dayF">
+                    <p class="date">Sun Jul 03 2023</p>
+                    <p>5 °C / 8 °C</p>
+                    <p class="desc">Overcast Clouds</p>
+                </div>
+
+                <div class="dayF">
+                    <p class="date">Sun Jul 03 2023</p>
+                    <p>5 °C / 8 °C</p>
+                    <p class="desc">Overcast Clouds</p>
+                </div>
+
+            </div>
         </div>
 
-        <div class="divider_ver"></div>
-        
-<!----------------- Forecast per Hours -------------------->
-
-        <div class="forecastH">
-            <p class="cast_header">Upcoming forecast</p>
-            <div class="templist">
-
-                <div class="next">
-                    <div>
-                        <p class="time">8:30 PM</p>
-                        <p>5 °C / 8 °C</p>
-                    </div>
-                    <p class="desc">Light Rain</p>
-                </div>
-
-                <div class="next">
-                    <div>
-                        <p class="time">8:30 PM</p>
-                        <p>5 °C / 8 °C</p>
-                    </div>
-                    <p class="desc">Light Rain</p>
-                </div>
-
-                <div class="next">
-                    <div>
-                        <p class="time">8:30 PM</p>
-                        <p>5 °C / 8 °C</p>
-                    </div>
-                    <p class="desc">Light Rain</p>
-                </div>
-
-                <div class="next">
-                    <div>
-                        <p class="time">8:30 PM</p>
-                        <p>5 °C / 8 °C</p>
-                    </div>
-                    <p class="desc">Light Rain</p>
-                </div>
-
-                <div class="next">
-                    <div>
-                        <p class="time">8:30 PM</p>
-                        <p>5 °C / 8 °C</p>
-                    </div>
-                    <p class="desc">Light Rain</p>
-                </div>
-
-            </div>
-        </div>
-
-    </main>
-
-<!------------- Forecast per 5 days ----------------------->
-
-    <div class="forecastD">
-
-        <div class="diliver_hor"></div>
-
-        <p class="cast_header">Next 5 Days Forecast</p>
-        <div class="weekF">
-
-            <div class="dayF">
-                <p class="date">Sun Jul 03 2023</p>
-                <p>5 °C / 8 °C</p
-                <p class="desc">Overcast Clouds</p>
-            </div>
-
-            <div class="dayF">
-                <p class="date">Sun Jul 03 2023</p>
-                <p>5 °C / 8 °C</p>
-                <p class="desc">Overcast Clouds</p>
-            </div>
-
-            <div class="dayF">
-                <p class="date">Sun Jul 03 2023</p>
-                <p>5 °C / 8 °C</p>
-                <p class="desc">Overcast Clouds</p>
-            </div>
-
-            <div class="dayF">
-                <p class="date">Sun Jul 03 2023</p>
-                <p>5 °C / 8 °C</p>
-                <p class="desc">Overcast Clouds</p>
-            </div>
-
-            <div class="dayF">
-                <p class="date">Sun Jul 03 2023</p>
-                <p>5 °C / 8 °C</p>
-                <p class="desc">Overcast Clouds</p>
-            </div>
-
-        </div>
     </div>
     
 <script src="main.js" type="module"></script>
