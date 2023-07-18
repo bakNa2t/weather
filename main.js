@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
             fetch(url).then(res => {
                 return res.json()
             }).then((data) => {
-                console.log(data);
+                // console.log(data);
                 weatherReport(data);
             })
         })
@@ -59,7 +59,7 @@ function weatherReport(data){
     fetch(urlcast).then(res => {
         return res.json()
     }).then((forecast) => {
-        console.log(forecast);
+        // console.log(forecast);
         hourForecast(forecast);
         dayForecast(forecast);
 
@@ -112,7 +112,7 @@ function dayForecast(forecast){
     document.querySelector('.weekF').innerHTML = '';
 
     for(let i = 7; i < forecast.list.length; i += 8){
-        console.log(forecast.list[i]);
+        // console.log(forecast.list[i]);
 
         let div = document.createElement('div');
         div.setAttribute('class','dayF');

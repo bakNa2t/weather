@@ -299,13 +299,13 @@ main{
         margin-bottom: 25px;
     }
     .next p{
-        font-size: 0.7em;
+        font-size: 0.8rem;
     }
     .time {
-        font-size: 0.8em;
+        font-size: 0.8rem;
     }
     .desc, .description {
-        font-size: 1em;
+        font-size: 0.8rem;
     } 
     .diliver_hor{
         width: 80%;
@@ -314,7 +314,10 @@ main{
         margin-bottom: 1rem;
     }
     .dayF p{
-        font-size: 0.8em;
+        font-size: 0.8rem;
+    }
+    .weekF{
+        gap: 4px;
     }
     .footer div {
         font-size: 0.6rem;
