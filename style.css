@@ -233,7 +233,7 @@ main{
                  0 0 7px rgba(254, 255, 255, 1);
     margin-left: 5px;
 }
-@media (max-width: 413px) {
+@media (max-width: 480px) {
     html {
         display: flex;
         justify-content: center;
