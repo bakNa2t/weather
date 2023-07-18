@@ -316,4 +316,7 @@ main{
     .dayF p{
         font-size: 0.8em;
     }
+    .footer div {
+        font-size: 0.6rem;
+    }
 }
