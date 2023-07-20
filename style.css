@@ -12,7 +12,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 179,0.2),rgba(117, 117, 163,0.15 ),rgba(0, 0, 204,0.5)),url(image/img-bg.jpeg);
+    background: linear-gradient(rgba(0, 0, 179,0.2),
+                                rgba(117, 117, 163,0.15 ),
+                                rgba(0, 0, 204,0.5)),
+                                  url(image/img-bg.jpeg);
     background-blend-mode: darken;
     background-repeat: no-repeat;
     background-position: center;
@@ -247,6 +250,9 @@ main{
         grid-template-columns: 1fr 3px 1fr;
         grid-column-gap: 15px;
         margin: 2rem 0;
+    }
+    .container-wrap {
+        padding: 8% 8%;
     }
     .header{
         display: block;
