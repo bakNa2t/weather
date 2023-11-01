@@ -115,7 +115,7 @@ function dayForecast(forecast){
         // console.log(forecast.list[i]);
 
         let div = document.createElement('div');
-        div.setAttribute('class','dayF');
+        div.setAttribute('class','dayF bg_light');
 
         let day = document.createElement('p');
         day.setAttribute('class','date');
