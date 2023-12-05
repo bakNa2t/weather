@@ -13,7 +13,7 @@
 <div align="center">
     <p style="width: 500px;">
         <a href="https://bakna2t.github.io/weather/">
-            <img alt="Keycode Webapp" src ="./images/weather_baner.png">
+            <img alt="Weather WebApp" src ="./image/weather_baner.png">
         </a>
     </p>
 </div>
