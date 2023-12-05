@@ -334,6 +334,9 @@ main {
     font-size: 1rem;
     /* margin-bottom: 25px; */
   }
+  #error {
+    font-size: 1rem;
+  }
   .next p {
     font-size: 0.8rem;
   }
