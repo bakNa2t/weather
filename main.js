@@ -88,6 +88,7 @@ function weatherReport(data) {
 
   if (data.cod == 404) {
     document.getElementById("error").innerText = "City not found";
+    document.getElementById("error").style.display = "block";
   } else {
     document.getElementById("error").innerText =
       "Something went wrong, please try again";
