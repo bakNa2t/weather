@@ -24,7 +24,6 @@ window.addEventListener("load", () => {
 
 document.getElementById("search").addEventListener("click", () => {
   let location = document.getElementById("input").value;
-
   let urlSearch = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apikey}`;
 
   fetch(urlSearch)
@@ -87,7 +86,10 @@ function weatherReport(data) {
     });
 
   if (data.cod == 404) {
-    document.getElementById("error").innerText = "City not found";
+    document.getElementById("error").innerText = `${data.message}`;
+    document.getElementById("error").style.display = "block";
+  } else if (data.cod == 400) {
+    document.getElementById("error").innerText = `${data.message}`;
     document.getElementById("error").style.display = "block";
   } else {
     document.getElementById("error").innerText = "";
