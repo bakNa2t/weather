@@ -90,8 +90,8 @@ function weatherReport(data) {
     document.getElementById("error").innerText = "City not found";
     document.getElementById("error").style.display = "block";
   } else {
-    document.getElementById("error").innerText =
-      "Something went wrong, please try again";
+    document.getElementById("error").innerText = "";
+    document.getElementById("error").style.display = "none";
   }
 }
 
