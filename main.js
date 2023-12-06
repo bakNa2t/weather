@@ -23,11 +23,11 @@ window.addEventListener("load", () => {
 //------------ Enter tne city name in the input block and searching ------------------
 
 document.getElementById("search").addEventListener("click", () => {
-  var place = document.getElementById("input").value;
+  let location = document.getElementById("input").value;
 
-  var urlsearch = `https://api.openweathermap.org/data/2.5/weather?q=${place}&appid=${apikey}`;
+  let urlSearch = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apikey}`;
 
-  fetch(urlsearch)
+  fetch(urlSearch)
     .then((res) => {
       return res.json();
     })
@@ -42,11 +42,11 @@ document.getElementById("search").addEventListener("click", () => {
 const inputSearch = document.getElementById("input");
 
 inputSearch.addEventListener("keyup", (e) => {
-  if (e.keyCode === 13) {
+  if (e.key === "Enter") {
     console.log(e.target.value);
-    var urlsearch = `https://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=${apikey}`;
+    let urlSearch = `https://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=${apikey}`;
 
-    fetch(urlsearch)
+    fetch(urlSearch)
       .then((res) => {
         return res.json();
       })
@@ -60,11 +60,11 @@ inputSearch.addEventListener("keyup", (e) => {
 //---------------- Display weather forecast at the certain area ----------------
 
 function weatherReport(data) {
-  var urlcast =
+  let urlCast =
     `https://api.openweathermap.org/data/2.5/forecast?q=${data.name}&` +
     `appid=${apikey}`;
 
-  fetch(urlcast)
+  fetch(urlCast)
     .then((res) => {
       return res.json();
     })
@@ -82,8 +82,8 @@ function weatherReport(data) {
       document.getElementById("clouds").innerText = data.weather[0].description;
 
       let icon = data.weather[0].icon;
-      let iconurl = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
-      document.getElementById("img").src = iconurl;
+      let iconUrl = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+      document.getElementById("img").src = iconUrl;
     });
 
   if (data.cod == 404) {
