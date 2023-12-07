@@ -59,6 +59,10 @@ function weatherReport(data) {
   let urlCast =
     `https://api.openweathermap.org/data/2.5/forecast?q=${data.name}&` +
     `appid=${apikey}`;
+  const errorMessage = document.getElementById("error");
+  const nameCity = document.getElementById("city");
+  const showTemp = document.getElementById("temperature");
+  const showDesc = document.getElementById("clouds");
 
   fetch(urlCast)
     .then((res) => {
@@ -66,26 +70,31 @@ function weatherReport(data) {
     })
     .then((forecast) => {
       if (data.cod == 404) {
-        document.getElementById("error").innerText = `${data.message
+        errorMessage.innerText = `${data.message
           .slice(0, 1)
           .toUpperCase()}${data.message.slice(1)}`;
-        document.getElementById("error").style.display = "block";
+        errorMessage.style.display = "block";
+        nameCity.innerText = "¯\\_(ツ)_/¯";
+        showTemp.innerText = "-/- °C";
+        showDesc.innerText = "No description";
       } else if (data.cod == 400) {
-        document.getElementById("error").innerText = `${data.message}`;
-        document.getElementById("error").style.display = "block";
+        errorMessage.innerText = `${data.message}`;
+        errorMessage.style.display = "block";
+        nameCity.innerText = "¯\\_(ツ)_/¯";
+        showTemp.innerText = "-/- °C";
+        showDesc.innerText = "No description";
       } else if (data.cod == 401) {
-        document.getElementById("error").innerText =
-          "Something went wrong. Try again later.";
-        document.getElementById("error").style.display = "block";
+        errorMessage.innerText = "Something went wrong. Try again later.";
+        errorMessage.style.display = "block";
+        nameCity.innerText = "¯\\_(ツ)_/¯";
+        showTemp.innerText = "-/- °C";
+        showDesc.innerText = "No description";
       } else {
-        document.getElementById("city").innerText =
-          data.name + ", " + data.sys.country;
+        nameCity.innerText = data.name + ", " + data.sys.country;
 
-        document.getElementById("temperature").innerText =
-          Math.floor(data.main.temp - 273) + " °C";
+        showTemp.innerText = Math.floor(data.main.temp - 273) + " °C";
 
-        document.getElementById("clouds").innerText =
-          data.weather[0].description;
+        showDesc.innerText = data.weather[0].description;
 
         let icon = data.weather[0].icon;
         let iconUrl = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
@@ -144,8 +153,6 @@ function dayForecast(forecast) {
   document.querySelector(".weekF").innerHTML = "";
 
   for (let i = 7; i < forecast.list.length; i += 8) {
-    // console.log(forecast.list[i]);
-
     let div = document.createElement("div");
     div.setAttribute("class", "dayF bg_light");
 
