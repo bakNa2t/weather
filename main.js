@@ -69,6 +69,19 @@ function weatherReport(data) {
     })
     .then((forecast) => {
       // console.log(forecast);
+      if (data.cod == 404) {
+        document.getElementById("error").innerText = `${data.message
+          .slice(0, 1)
+          .toUpperCase()}${data.message.slice(1)}`;
+        document.getElementById("error").style.display = "block";
+      } else if (data.cod == 400) {
+        document.getElementById("error").innerText = `${data.message}`;
+        document.getElementById("error").style.display = "block";
+      } else {
+        document.getElementById("error").innerText = "";
+        document.getElementById("error").style.display = "none";
+      }
+
       hourForecast(forecast);
       dayForecast(forecast);
 
@@ -85,16 +98,16 @@ function weatherReport(data) {
       document.getElementById("img").src = iconUrl;
     });
 
-  if (data.cod == 404) {
-    document.getElementById("error").innerText = `${data.message}`;
-    document.getElementById("error").style.display = "block";
-  } else if (data.cod == 400) {
-    document.getElementById("error").innerText = `${data.message}`;
-    document.getElementById("error").style.display = "block";
-  } else {
-    document.getElementById("error").innerText = "";
-    document.getElementById("error").style.display = "none";
-  }
+  // if (data.cod == 404) {
+  //   document.getElementById("error").innerText = `${data.message}`;
+  //   document.getElementById("error").style.display = "block";
+  // } else if (data.cod == 400) {
+  //   document.getElementById("error").innerText = `${data.message}`;
+  //   document.getElementById("error").style.display = "block";
+  // } else {
+  //   document.getElementById("error").innerText = "";
+  //   document.getElementById("error").style.display = "none";
+  // }
 }
 
 //---------------- Display forecast per hours ------------------------------
