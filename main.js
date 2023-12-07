@@ -13,7 +13,6 @@ window.addEventListener("load", () => {
           return res.json();
         })
         .then((data) => {
-          // console.log(data);
           weatherReport(data);
         });
     });
@@ -31,7 +30,6 @@ document.getElementById("search").addEventListener("click", () => {
       return res.json();
     })
     .then((data) => {
-      console.log(data);
       weatherReport(data);
     });
 });
@@ -42,7 +40,6 @@ const inputSearch = document.getElementById("input");
 
 inputSearch.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
-    console.log(e.target.value);
     let urlSearch = `https://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=${apikey}`;
 
     fetch(urlSearch)
@@ -68,7 +65,6 @@ function weatherReport(data) {
       return res.json();
     })
     .then((forecast) => {
-      // console.log(forecast);
       if (data.cod == 404) {
         document.getElementById("error").innerText = `${data.message
           .slice(0, 1)
@@ -76,6 +72,10 @@ function weatherReport(data) {
         document.getElementById("error").style.display = "block";
       } else if (data.cod == 400) {
         document.getElementById("error").innerText = `${data.message}`;
+        document.getElementById("error").style.display = "block";
+      } else if (data.cod == 401) {
+        document.getElementById("error").innerText =
+          "Something went wrong. Try again later.";
         document.getElementById("error").style.display = "block";
       } else {
         document.getElementById("error").innerText = "";
@@ -97,17 +97,6 @@ function weatherReport(data) {
       let iconUrl = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
       document.getElementById("img").src = iconUrl;
     });
-
-  // if (data.cod == 404) {
-  //   document.getElementById("error").innerText = `${data.message}`;
-  //   document.getElementById("error").style.display = "block";
-  // } else if (data.cod == 400) {
-  //   document.getElementById("error").innerText = `${data.message}`;
-  //   document.getElementById("error").style.display = "block";
-  // } else {
-  //   document.getElementById("error").innerText = "";
-  //   document.getElementById("error").style.display = "none";
-  // }
 }
 
 //---------------- Display forecast per hours ------------------------------
