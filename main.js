@@ -78,24 +78,25 @@ function weatherReport(data) {
           "Something went wrong. Try again later.";
         document.getElementById("error").style.display = "block";
       } else {
+        document.getElementById("city").innerText =
+          data.name + ", " + data.sys.country;
+
+        document.getElementById("temperature").innerText =
+          Math.floor(data.main.temp - 273) + " °C";
+
+        document.getElementById("clouds").innerText =
+          data.weather[0].description;
+
+        let icon = data.weather[0].icon;
+        let iconUrl = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+        document.getElementById("img").src = iconUrl;
+
         document.getElementById("error").innerText = "";
         document.getElementById("error").style.display = "none";
       }
 
       hourForecast(forecast);
       dayForecast(forecast);
-
-      document.getElementById("city").innerText =
-        data.name + ", " + data.sys.country;
-
-      document.getElementById("temperature").innerText =
-        Math.floor(data.main.temp - 273) + " °C";
-
-      document.getElementById("clouds").innerText = data.weather[0].description;
-
-      let icon = data.weather[0].icon;
-      let iconUrl = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
-      document.getElementById("img").src = iconUrl;
     });
 }
 
