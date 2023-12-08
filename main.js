@@ -151,33 +151,64 @@ function hourForecast(forecast) {
 
 function dayForecast(forecast) {
   document.querySelector(".weekF").innerHTML = "";
+  if (screen.width > 768) {
+    console.log(forecast.list);
+    for (let i = 7; i < forecast.list.length; i += 8) {
+      let div = document.createElement("div");
+      div.setAttribute("class", "dayF bg_light");
 
-  for (let i = 7; i < forecast.list.length; i += 8) {
-    let div = document.createElement("div");
-    div.setAttribute("class", "dayF bg_light");
+      let day = document.createElement("p");
+      day.setAttribute("class", "date");
+      day.innerText = new Date(forecast.list[i].dt * 1000).toDateString(
+        undefined,
+        "Europe"
+      );
+      div.appendChild(day);
 
-    let day = document.createElement("p");
-    day.setAttribute("class", "date");
-    day.innerText = new Date(forecast.list[i].dt * 1000).toDateString(
-      undefined,
-      "Europe"
-    );
-    div.appendChild(day);
+      let temp = document.createElement("p");
+      temp.innerText =
+        Math.floor(forecast.list[i].main.temp_max - 273) +
+        " °C" +
+        " / " +
+        Math.floor(forecast.list[i].main.temp_min - 273) +
+        " °C";
+      div.appendChild(temp);
 
-    let temp = document.createElement("p");
-    temp.innerText =
-      Math.floor(forecast.list[i].main.temp_max - 273) +
-      " °C" +
-      " / " +
-      Math.floor(forecast.list[i].main.temp_min - 273) +
-      " °C";
-    div.appendChild(temp);
+      let description = document.createElement("p");
+      description.setAttribute("class", "description");
+      description.innerText = forecast.list[i].weather[0].description;
+      div.appendChild(description);
 
-    let description = document.createElement("p");
-    description.setAttribute("class", "description");
-    description.innerText = forecast.list[i].weather[0].description;
-    div.appendChild(description);
+      document.querySelector(".weekF").appendChild(div);
+    }
+  } else {
+    for (let i = 7; i < forecast.list.length - 16; i += 8) {
+      let div = document.createElement("div");
+      div.setAttribute("class", "dayF bg_light");
 
-    document.querySelector(".weekF").appendChild(div);
+      let day = document.createElement("p");
+      day.setAttribute("class", "date");
+      day.innerText = new Date(forecast.list[i].dt * 1000).toDateString(
+        undefined,
+        "Europe"
+      );
+      div.appendChild(day);
+
+      let temp = document.createElement("p");
+      temp.innerText =
+        Math.floor(forecast.list[i].main.temp_max - 273) +
+        " °C" +
+        " / " +
+        Math.floor(forecast.list[i].main.temp_min - 273) +
+        " °C";
+      div.appendChild(temp);
+
+      let description = document.createElement("p");
+      description.setAttribute("class", "description");
+      description.innerText = forecast.list[i].weather[0].description;
+      div.appendChild(description);
+
+      document.querySelector(".weekF").appendChild(div);
+    }
   }
 }

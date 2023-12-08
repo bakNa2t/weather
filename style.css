@@ -243,6 +243,7 @@ main {
 .weekF {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
   text-align: center;
 }
 
@@ -335,11 +336,15 @@ main {
   .cast_header {
     width: max-content;
     padding: 5px 10px;
+    margin-bottom: 0.5rem;
     border-radius: 15px;
     font-size: 1rem;
   }
   #error {
     font-size: 1rem;
+  }
+  .next {
+    margin: 5px 0;
   }
   .next p {
     font-size: 0.8rem;
@@ -349,10 +354,11 @@ main {
   }
   .desc,
   .description {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .divider_ver {
     width: 2px;
+    height: 80%;
   }
   .divider_hor {
     width: 80%;
@@ -367,7 +373,8 @@ main {
     font-size: 0.8rem;
   }
   .weekF {
-    gap: 4px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
   .footer div {
     font-size: 0.6rem;
