@@ -218,16 +218,20 @@ main {
 }
 
 .divider_ver,
-.diliver_hor {
+.divider_hor {
   background: rgba(217, 217, 217, 0.5);
   height: 240px;
   border-radius: 5px;
   border: 1px solid rgba(118, 255, 122, 0.7);
 }
 
-.diliver_hor {
+.divider_ver {
+  width: 4px;
+}
+
+.divider_hor {
   width: 60%;
-  height: 2px;
+  height: 4px;
   margin: 0 auto;
   margin-bottom: 1rem;
 }
@@ -274,6 +278,7 @@ main {
   border-radius: 5px;
 }
 
+/* Media Queries for small screens */
 @media (max-width: 768px) {
   main {
     display: grid;
@@ -314,10 +319,10 @@ main {
     margin: 20px 0;
   }
   #city {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
   #temperature {
-    font-size: 1.5em;
+    font-size: 1.75rem;
     margin: 0;
     margin-left: 14px;
     margin-bottom: 5px;
@@ -346,7 +351,10 @@ main {
   .description {
     font-size: 0.8rem;
   }
-  .diliver_hor {
+  .divider_ver {
+    width: 2px;
+  }
+  .divider_hor {
     width: 80%;
     height: 2px;
     margin: 0 auto;
