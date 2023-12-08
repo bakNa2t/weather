@@ -191,6 +191,17 @@ main {
   text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 5px rgba(255, 0, 255, 1);
 }
 
+.warning {
+  height: 240px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 7rem 0;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Orbition", sans-serif;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 5px rgba(255, 0, 255, 1);
+}
+
 .time,
 .date {
   color: rgb(0, 255, 191);
@@ -341,6 +352,9 @@ main {
     font-size: 1rem;
   }
   #error {
+    font-size: 1rem;
+  }
+  .warning {
     font-size: 1rem;
   }
   .next {

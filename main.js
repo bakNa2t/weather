@@ -2,20 +2,31 @@ const apikey = "cad7ec124945dcfff04e457e76760d90";
 
 window.addEventListener("load", () => {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition((position) => {
-      let lon = position.coords.longitude;
-      let lat = position.coords.latitude;
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        let lon = position.coords.longitude;
+        let lat = position.coords.latitude;
 
-      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apikey}`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apikey}`;
 
-      fetch(url)
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          weatherReport(data);
-        });
-    });
+        fetch(url)
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            weatherReport(data);
+          });
+      },
+      (error) => {
+        if (error.PERMISSION_DENIED) {
+          const showWarnig = document.querySelector(".forecastH");
+          let warning = document.createElement("div");
+          warning.setAttribute("class", "warning");
+          warning.textContent = "Please allow your location!";
+          showWarnig.appendChild(warning);
+        }
+      }
+    );
   }
 });
 
