@@ -39,11 +39,11 @@ body {
 }
 
 .header h1 {
-  text-decoration: underline;
+  font-size: 2.5rem;
   font-family: "Orbition", sans-serif;
   -webkit-text-stroke: 0.75px #00ff7f;
   -webkit-text-fill-color: #90ee90;
-  animation: fill 2.5s ease-in-out infinite alternate;
+  animation: fill 5.5s ease-in-out infinite alternate;
 }
 
 @keyframes fill {
@@ -56,7 +56,7 @@ body {
 }
 
 #input {
-  font-size: 18px;
+  font-size: 20px;
   padding: 5px 10px;
   outline: none;
   border: none;
@@ -82,7 +82,7 @@ input::placeholder {
   padding: 5px 20px;
   color: #994d00;
   outline: none;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 15px;
   cursor: pointer;
   border: none;
@@ -307,7 +307,7 @@ main {
     margin: 0 0 2rem 0;
   }
   .header h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
     margin-bottom: 1rem;
   }
   #input {
