@@ -18,7 +18,7 @@ body {
       rgba(117, 117, 163, 0.15),
       rgba(0, 0, 204, 0.5)
     ),
-    url(image/img-bg.jpeg);
+    url(../image/img-bg.jpeg);
   background-blend-mode: darken;
   background-repeat: no-repeat;
   background-position: center;
