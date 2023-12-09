@@ -162,8 +162,9 @@ function hourForecast(forecast) {
 
 function dayForecast(forecast) {
   document.querySelector(".weekF").innerHTML = "";
+  const headerForecast = document.querySelectorAll(".cast_header");
+
   if (screen.width > 768) {
-    console.log(forecast.list);
     for (let i = 7; i < forecast.list.length; i += 8) {
       let div = document.createElement("div");
       div.setAttribute("class", "dayF bg_light");
@@ -193,6 +194,8 @@ function dayForecast(forecast) {
       document.querySelector(".weekF").appendChild(div);
     }
   } else {
+    headerForecast[1].innerText = "Next 3 Days Forecast";
+
     for (let i = 7; i < forecast.list.length - 16; i += 8) {
       let div = document.createElement("div");
       div.setAttribute("class", "dayF bg_light");
