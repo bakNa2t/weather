@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
   }
 });
 
-//------------ Enter tne city name in the input block and searching ------------------
+//----- Enter tne city name in the input block and searching -----
 
 document.getElementById("search").addEventListener("click", () => {
   let location = document.getElementById("input").value;
@@ -45,7 +45,7 @@ document.getElementById("search").addEventListener("click", () => {
     });
 });
 
-//---------Adding keypress 'Enter' in the input block ------------------
+//----- Adding keypress 'Enter' in the input block -----
 
 const inputSearch = document.getElementById("input");
 
@@ -64,7 +64,7 @@ inputSearch.addEventListener("keyup", (e) => {
   }
 });
 
-//---------------- Display weather forecast at the certain area ----------------
+//----- Display weather forecast at the certain area -----
 
 function weatherReport(data) {
   let urlCast =
@@ -124,7 +124,7 @@ function weatherReport(data) {
     });
 }
 
-//---------------- Display forecast per hours ------------------------------
+//----- Display forecast per hours -----
 
 function hourForecast(forecast) {
   document.querySelector(".templist").innerHTML = "";
@@ -162,13 +162,14 @@ function hourForecast(forecast) {
   }
 }
 
-//---------------- Display forecast per days --------------------------------
+//----- Display forecast per 5/3 days -----
 
 function dayForecast(forecast) {
   document.querySelector(".weekF").innerHTML = "";
   const headerForecast = document.querySelectorAll(".cast_header");
 
   if (screen.width > 768) {
+    // ------ Forecast per 5 days ------
     for (let i = 7; i < forecast.list.length; i += 8) {
       let div = document.createElement("div");
       div.setAttribute("class", "dayF bg_light");
@@ -198,6 +199,7 @@ function dayForecast(forecast) {
       document.querySelector(".weekF").appendChild(div);
     }
   } else {
+    // ------ Forecast per 3 days ------
     headerForecast[1].innerText = "Next 3 Days Forecast";
 
     for (let i = 7; i < forecast.list.length - 16; i += 8) {
