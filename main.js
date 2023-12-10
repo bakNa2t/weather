@@ -75,6 +75,8 @@ function weatherReport(data) {
   const showTemp = document.getElementById("temperature");
   const showDesc = document.getElementById("clouds");
 
+  showSpinner();
+
   fetch(urlCast)
     .then((res) => {
       return res.json();
@@ -114,6 +116,8 @@ function weatherReport(data) {
         document.getElementById("error").innerText = "";
         document.getElementById("error").style.display = "none";
       }
+
+      hideSpinner();
 
       hourForecast(forecast);
       dayForecast(forecast);
@@ -225,4 +229,13 @@ function dayForecast(forecast) {
       document.querySelector(".weekF").appendChild(div);
     }
   }
+}
+
+// ----- ShowSpinner -----
+function showSpinner() {
+  document.querySelector(".spinner").classList.add("show");
+}
+// ----- HideSpinner -----
+function hideSpinner() {
+  document.querySelector(".spinner").classList.remove("show");
 }
