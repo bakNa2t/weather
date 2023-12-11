@@ -97,7 +97,7 @@ input::placeholder {
   transition: 0.5s;
 }
 
-main {
+.main {
   display: grid;
   grid-template-columns: 1fr 5px 1fr;
   grid-column-gap: 25px;
@@ -292,7 +292,7 @@ main {
 
 /* Media Queries for small screens */
 @media (max-width: 768px) {
-  main {
+  .main {
     display: grid;
     grid-template-columns: 1fr 3px 1fr;
     grid-column-gap: 10px;
