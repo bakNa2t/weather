@@ -305,13 +305,14 @@ noscript {
 }
 
 noscript h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
-  color: #00ffee;
-  padding: 0 1rem;
-  border: 1px solid var(--color-bg-secondary);
+  color: #97fff4;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 5px rgba(255, 0, 255, 1);
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #97fff4;
   border-radius: 1rem;
-  background-color: rgba(0, 130, 127, 0.4);
+  background-color: rgba(232, 204, 215, 0.5);
 }
 
 /* Media Queries for small screens */
@@ -416,5 +417,10 @@ noscript h3 {
   }
   .footer div {
     font-size: 0.6rem;
+  }
+  noscript h3 {
+    margin: 0 5%;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.5rem;
   }
 }
