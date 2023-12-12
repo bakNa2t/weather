@@ -54,7 +54,9 @@ body {
     0 0 / var(--bg-size) 100%;
   color: transparent;
   background-clip: text;
+  -webkit-background-clip: text;
   animation: move-bg 10s linear infinite;
+  -webkit-animation: move-bg 10s linear infinite;
 }
 
 @keyframes move-bg {
