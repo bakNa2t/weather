@@ -55,6 +55,7 @@ body {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation: move-bg 10s linear infinite;
   -webkit-animation: move-bg 10s linear infinite;
 }
