@@ -39,19 +39,29 @@ body {
 }
 
 .header h1 {
-  font-size: 2.5rem;
+  --bg-size: 400%;
+  --color-one: #00fa9a;
+  --color-two: #007f66;
   font-family: "Orbition", sans-serif;
-  -webkit-text-stroke: 0.75px #00ff7f;
-  -webkit-text-fill-color: #90ee90;
-  animation: fill 5.5s ease-in-out infinite alternate;
+  font-weight: 600;
+  font-size: clamp(2.5rem, 5vmin, 6rem);
+  background: linear-gradient(
+      135deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+
+  -webkit-text-stroke: 0.25px #7fffd4;
+  color: transparent;
+  background-clip: text;
+  animation: move-bg 10s linear infinite;
 }
 
-@keyframes fill {
-  from {
-    -webkit-text-fill-color: #00ffbf;
-  }
+@keyframes move-bg {
   to {
-    -webkit-text-fill-color: #f0ffff;
+    background-position: var(--bg-size) 0;
   }
 }
 
