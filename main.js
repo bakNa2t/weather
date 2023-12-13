@@ -168,7 +168,7 @@ function dayForecast(forecast) {
   document.querySelector(".weekF").innerHTML = "";
   const headerForecast = document.querySelectorAll(".cast_header");
 
-  if (screen.width > 768) {
+  if (screen.width > 769) {
     // ------ Forecast per 5 days ------
     for (let i = 7; i < forecast.list.length; i += 8) {
       let div = document.createElement("div");
