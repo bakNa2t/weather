@@ -154,9 +154,12 @@
     width: fit-content;
     margin: auto;
   }
+  .templist {
+    padding: 0 1rem;
+  }
   .next {
     margin: 2px 0;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .next p {
     font-size: 1rem;
