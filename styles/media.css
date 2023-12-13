@@ -108,11 +108,11 @@
 /*for width < 512px */
 @media (max-width: 512px) {
   .container-wrap {
-    padding: 0% 10%;
+    padding: 0% 7%;
   }
   .main {
     grid-template-columns: 1fr;
-    grid-row-gap: 15px;
+    grid-row-gap: 8px;
     margin: 0;
   }
   .header {
@@ -128,7 +128,7 @@
   }
   .divider_hor {
     width: 100%;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
   }
   #city {
     font-size: 1.75rem;
@@ -138,17 +138,21 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .temp_box {
-    gap: 20px;
-    margin: 10px 0 15px 0;
+    gap: 10px;
+    margin: 5px 0;
   }
   .temp_box img {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
   #temperature {
     font-weight: 600;
     font-size: 2rem;
     margin: 0;
+  }
+  #clouds {
+    width: fit-content;
+    margin: auto;
   }
   .next {
     margin: 2px 0;
