@@ -133,6 +133,10 @@
   #city {
     font-size: 1.75rem;
   }
+  .weather__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
   .temp_box {
     gap: 20px;
     margin: 10px 0 15px 0;
