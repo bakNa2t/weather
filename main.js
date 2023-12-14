@@ -74,6 +74,7 @@ function weatherReport(data) {
   const nameCity = document.getElementById("city");
   const showTemp = document.getElementById("temperature");
   const showDesc = document.getElementById("clouds");
+  const warning = document.querySelector(".warning");
 
   showSpinner();
 
@@ -103,10 +104,6 @@ function weatherReport(data) {
         showTemp.innerText = "-/- °C";
         showDesc.innerText = "No description";
       } else {
-        document.querySelector(".warning") == true
-          ? ""
-          : document.querySelector(".warning").classList.add("hide");
-
         nameCity.innerText = data.name + ", " + data.sys.country;
 
         showTemp.innerText = Math.floor(data.main.temp - 273) + " °C";
@@ -121,6 +118,8 @@ function weatherReport(data) {
         document.getElementById("error").style.display = "none";
       }
 
+      warning !== null ? warning.classList.add("hide") : warning;
+      console.log(warning);
       hideSpinner();
 
       hourForecast(forecast);
