@@ -102,9 +102,9 @@ function weatherReport(data) {
         nameCity.innerText = "¯\\_(ツ)_/¯";
         showTemp.innerText = "-/- °C";
         showDesc.innerText = "No description";
-      } else if (data.cod == 200) {
-        document.querySelector(".warning").style.display = "none";
       } else {
+        document.querySelector(".warning").classList.add("hide");
+
         nameCity.innerText = data.name + ", " + data.sys.country;
 
         showTemp.innerText = Math.floor(data.main.temp - 273) + " °C";

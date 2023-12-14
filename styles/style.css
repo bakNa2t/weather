@@ -325,3 +325,8 @@ noscript h3 {
   border-radius: 1rem;
   background-color: rgba(232, 204, 215, 0.5);
 }
+
+/* Independent Styles */
+.hide {
+  display: none;
+}
