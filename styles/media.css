@@ -107,6 +107,10 @@
 }
 /*for width < 512px */
 @media (max-width: 512px) {
+  body {
+    align-items: start;
+    margin-top: 10%;
+  }
   .container-wrap {
     padding: 0% 7%;
   }
