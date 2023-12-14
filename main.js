@@ -102,6 +102,8 @@ function weatherReport(data) {
         nameCity.innerText = "¯\\_(ツ)_/¯";
         showTemp.innerText = "-/- °C";
         showDesc.innerText = "No description";
+      } else if (data.cod == 200) {
+        document.querySelector(".warning").style.display = "none";
       } else {
         nameCity.innerText = data.name + ", " + data.sys.country;
 
