@@ -103,7 +103,9 @@ function weatherReport(data) {
         showTemp.innerText = "-/- °C";
         showDesc.innerText = "No description";
       } else {
-        document.querySelector(".warning").classList.add("hide");
+        document.querySelector(".warning") == true
+          ? ""
+          : document.querySelector(".warning").classList.add("hide");
 
         nameCity.innerText = data.name + ", " + data.sys.country;
 
