@@ -58,7 +58,6 @@ inputSearch.addEventListener("keyup", (e) => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         weatherReport(data);
       });
   }
@@ -119,7 +118,7 @@ function weatherReport(data) {
       }
 
       warning !== null ? warning.classList.add("hide") : warning;
-      console.log(warning);
+
       hideSpinner();
 
       hourForecast(forecast);
