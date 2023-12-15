@@ -1,4 +1,4 @@
-# Weather web aplication using OpenWeatherMap API
+<h1 align="center"> Weather web aplication using OpenWeatherMap API</h1>
 
 #### What has been implemented:
 
@@ -10,11 +10,12 @@
 
 ---
 
-<div align="center">
+[![WeatherApp](./image/weather_baner.png)](https://bakna2t.github.io/weather/)
+
+<!-- <div align="center">
     <p style="width: 500px;">
         <a href="https://bakna2t.github.io/weather/">
             <img alt="Weather WebApp" src ="./image/weather_baner.png">
         </a>
     </p>
-</div>
-<!-- [![WeatherApp](./image/weather_baner.png)](https://bakna2t.github.io/weather/) -->
+</div> -->
