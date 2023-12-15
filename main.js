@@ -247,7 +247,7 @@ function hideSpinner() {
 
 // ----- Check User Agent -----
 function checkUserAgent() {
-  const userAgent = navigator.userAgent.indexOf("Opera Mobile");
+  const userAgent = navigator.userAgent.indexOf("OPR");
   if (userAgent !== -1) {
     document.querySelector("body").style.alignItems = "start";
     document.querySelector("body").style.marginTop = "10%";
