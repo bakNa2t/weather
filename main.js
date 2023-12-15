@@ -76,6 +76,7 @@ function weatherReport(data) {
   const warning = document.querySelector(".warning");
 
   showSpinner();
+  checkUserAgent();
 
   fetch(urlCast)
     .then((res) => {
@@ -242,4 +243,13 @@ function showSpinner() {
 // ----- HideSpinner -----
 function hideSpinner() {
   document.querySelector(".spinner").classList.remove("show");
+}
+
+// ----- Check User Agent -----
+function checkUserAgent() {
+  const userAgent = navigator.userAgent.indexOf("Opera Mobile");
+  if (userAgent !== -1) {
+    document.querySelector("body").style.alignItems = "start";
+    document.querySelector("body").style.marginTop = "10%";
+  }
 }
