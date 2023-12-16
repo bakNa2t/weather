@@ -11,6 +11,7 @@
 - if location doesn't exist error <code>City not found</code> displays at the screen app
 - added <code>Spinner</code> element before <code>Fetch</code> API get data form OpenWeatherMap.org
 - dynamically adding page <code>DOM</code> elements when receiving data
+- with <code>checkUserAgent</code> function defined user browser and if it's Opera Mini it will update CSS properties
 - click here to see => [_**WeatherApp**_](https://bakna2t.github.io/weather/)
 
 ---
