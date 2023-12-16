@@ -251,9 +251,4 @@ function checkUserAgent() {
   const body = document.querySelector("body");
 
   userAgent !== -1 ? body.classList.add("flex-mobile") : "";
-
-  // if (userAgent !== -1) {
-  //   document.querySelector("body").style.alignItems = "start";
-  //   document.querySelector("body").style.marginTop = "10%";
-  // }
 }
