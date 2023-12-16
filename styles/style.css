@@ -330,3 +330,8 @@ noscript h3 {
 .hide {
   display: none;
 }
+
+.flex-mobile {
+  align-items: start;
+  margin-top: 5%;
+}
